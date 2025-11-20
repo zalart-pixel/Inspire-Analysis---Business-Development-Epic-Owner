@@ -52,13 +52,12 @@ watch(isAdminLoggedIn, (newVal) => {
 }
 
 .calculator-header {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .calculator-header h1 {
   font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
+  color: #6b7280;
   margin-bottom: 0.5rem;
 }
 

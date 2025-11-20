@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { definePageMeta } from '#app'
 import CalculatorTool from './tool.vue'
 
 definePageMeta({

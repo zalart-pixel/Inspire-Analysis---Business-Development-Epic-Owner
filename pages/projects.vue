@@ -64,32 +64,14 @@ definePageMeta({
 
 <template>
   <div class="min-h-screen bg-white">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="font-semibold text-xl text-gray-900">Inspire Analysis</div>
-        <div class="flex gap-8 items-center">
-          <NuxtLink to="/" class="text-gray-700 hover:text-gray-900 transition">Home</NuxtLink>
-          <NuxtLink to="/projects" class="text-gray-700 hover:text-gray-900 transition">Projects</NuxtLink>
-          <button 
-            v-if="isLoggedIn"
-            @click="handleLogout"
-            class="px-6 py-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition"
-          >
-            Logout
-          </button>
-        </div>
-      </div>
-    </nav>
-
     <!-- Main Content -->
     <div class="pt-28 pb-12 px-6">
       <div class="max-w-4xl mx-auto">
         <!-- Login Section -->
         <div v-if="!isLoggedIn" class="mb-12">
           <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Project Access</h2>
-            <p class="text-gray-600 mb-6">Login to access your projects</p>
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6">Project Access</h2>
+            <p class="text-gray-600 mb-6 font-normal">Login to access your projects</p>
             
             <form @submit.prevent="handleLogin" class="space-y-4">
               <div>
@@ -114,7 +96,7 @@ definePageMeta({
               
               <div v-if="loginError" class="text-red-600 text-sm">{{ loginError }}</div>
               
-              <div class="text-sm text-gray-600 bg-blue-50 p-3 rounded">
+              <div class="text-sm text-gray-600 bg-blue-50 p-3 rounded font-normal">
                 <p class="font-medium">Demo Credentials:</p>
                 <p>Admin: username = <code>admin</code>, password = <code>admin123</code></p>
                 <p>User: use any username and password</p>
@@ -135,8 +117,8 @@ definePageMeta({
           <div class="mb-8">
             <div class="flex justify-between items-center">
               <div>
-                <h2 class="text-3xl font-bold text-gray-900 mb-2">Your Projects</h2>
-                <p class="text-gray-600">Welcome! You are logged in as {{ userRole === 'admin' ? 'Administrator' : 'User' }}</p>
+                <h2 class="text-3xl font-semibold text-gray-900 mb-2">Your Projects</h2>
+                <p class="text-gray-600 font-normal">Welcome! You are logged in as {{ userRole === 'admin' ? 'Administrator' : 'User' }}</p>
               </div>
               <button 
                 @click="handleLogout"
@@ -156,7 +138,7 @@ definePageMeta({
             >
               <div class="text-4xl mb-4">{{ project.icon }}</div>
               <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ project.name }}</h3>
-              <p class="text-gray-600 mb-6">{{ project.description }}</p>
+              <p class="text-gray-600 mb-6 font-normal">{{ project.description }}</p>
               <NuxtLink 
                 :to="project.url"
                 class="inline-block px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium"
@@ -168,7 +150,7 @@ definePageMeta({
 
           <!-- No Projects Message -->
           <div v-if="visibleProjects.length === 0" class="text-center py-12">
-            <p class="text-gray-600 text-lg">No projects available for you at this time.</p>
+            <p class="text-gray-600 text-lg font-normal">No projects available for you at this time.</p>
           </div>
         </div>
       </div>

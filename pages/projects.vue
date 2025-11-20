@@ -70,7 +70,7 @@ definePageMeta({
         <!-- Login Section -->
         <div v-if="!isLoggedIn" class="mb-12">
           <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6">Project Access</h2>
+            <h2 class="text-3xl font-normal text-gray-900 mb-6">Project Access</h2>
             <p class="text-gray-600 mb-6 font-normal">Login to access your projects</p>
             
             <form @submit.prevent="handleLogin" class="space-y-4">
@@ -117,7 +117,7 @@ definePageMeta({
           <div class="mb-8">
             <div class="flex justify-between items-center">
               <div>
-                <h2 class="text-3xl font-semibold text-gray-900 mb-2">Your Projects</h2>
+                <h2 class="text-3xl font-normal text-gray-900 mb-2">Your Projects</h2>
                 <p class="text-gray-600 font-normal">Welcome! You are logged in as {{ userRole === 'admin' ? 'Administrator' : 'User' }}</p>
               </div>
               <button 
@@ -137,7 +137,7 @@ definePageMeta({
               class="bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition p-6 group cursor-pointer"
             >
               <div class="text-4xl mb-4">{{ project.icon }}</div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ project.name }}</h3>
+              <h3 class="text-xl font-normal text-gray-900 mb-2">{{ project.name }}</h3>
               <p class="text-gray-600 mb-6 font-normal">{{ project.description }}</p>
               <NuxtLink 
                 :to="project.url"

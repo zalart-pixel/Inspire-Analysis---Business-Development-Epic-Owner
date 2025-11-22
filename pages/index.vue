@@ -2,77 +2,104 @@
 definePageMeta({
   layout: 'default',
 })
+
+useHead({
+  title: 'Inspire Analysis - Global Project Management Excellence',
+  meta: [
+    {
+      name: 'description',
+      content: 'Professional business planning and analysis tools for global project management excellence.'
+    }
+  ]
+})
 </script>
 
 <template>
   <div class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <section class="pt-32 pb-24 px-6">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-6xl md:text-7xl font-normal text-gray-900 mb-6 leading-tight">
-          Business Tools
-          <br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
-            Simplified
-          </span>
+    <section class="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl sm:text-6xl font-semibold text-gray-900 tracking-tight leading-tight mb-6">
+          Inspire Analysis
         </h1>
-        <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto font-normal">
-          Powerful, intuitive tools designed for modern businesses. From space planning to project management, we've got you covered.
+        <p class="text-2xl sm:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+          Global Project Management Excellence
         </p>
-        <div class="flex gap-4 justify-center">
-          <NuxtLink to="/projects" class="px-8 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition font-medium">
-            Get Started
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <NuxtLink to="/business-tools" class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md">
+            Explore Business Tools
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </NuxtLink>
-          <a href="#features" class="px-8 py-3 border border-gray-300 text-gray-900 rounded-full hover:border-gray-400 transition font-medium">
-            Learn More
-          </a>
         </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-24 bg-gray-50 px-6">
-      <div class="max-w-6xl mx-auto">
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
-          <h2 class="text-5xl font-normal text-gray-900 mb-4">Features</h2>
-          <p class="text-xl text-gray-600 font-normal">Everything you need to succeed</p>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Comprehensive Solutions</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Professional tools designed to optimize your business operations and drive strategic growth.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="p-8 bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition">
-            <div class="w-12 h-12 bg-gray-900 rounded-full mb-4"></div>
-            <h3 class="text-xl font-normal text-gray-900 mb-2">Office Calculator</h3>
-            <p class="text-gray-600 font-normal">Calculate and plan your office space with precision. Save your configurations and revisit them anytime.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature Card 1 -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Interactive Planning</h3>
+            <p class="text-gray-600 leading-relaxed">Powerful planning tools to organize projects, allocate resources, and track progress efficiently.</p>
           </div>
-          <div class="p-8 bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition">
-            <div class="w-12 h-12 bg-gray-900 rounded-full mb-4"></div>
-            <h3 class="text-xl font-normal text-gray-900 mb-2">Project Management</h3>
-            <p class="text-gray-600 font-normal">Manage multiple projects with ease. Admin access to all projects, or view only your assigned ones.</p>
+
+          <!-- Feature Card 2 -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Advanced Analysis</h3>
+            <p class="text-gray-600 leading-relaxed">In-depth analytics and insights to make data-driven decisions for your business strategy.</p>
           </div>
-          <div class="p-8 bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition">
-            <div class="w-12 h-12 bg-gray-900 rounded-full mb-4"></div>
-            <h3 class="text-xl font-normal text-gray-900 mb-2">Secure Access</h3>
-            <p class="text-gray-600 font-normal">Password-protected projects ensure your data stays secure and accessible only to authorized users.</p>
+
+          <!-- Feature Card 3 -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Flexible Solutions</h3>
+            <p class="text-gray-600 leading-relaxed">Customizable tools that adapt to your specific business needs and workflow requirements.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 px-6">
-      <div class="max-w-4xl mx-auto bg-gray-900 text-white rounded-3xl p-12 text-center">
-        <h2 class="text-5xl font-normal mb-4">Ready to get started?</h2>
-        <p class="text-xl text-gray-300 mb-8 font-normal">Access your projects and tools with secure login</p>
-        <NuxtLink to="/projects" class="inline-block px-8 py-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition font-normal">
-          Access Projects
+    <section class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>
+        <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">Access our comprehensive suite of business tools to optimize your operations and drive growth.</p>
+        <NuxtLink to="/business-tools" class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md">
+          Explore Tools
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
         </NuxtLink>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-gray-200 py-8 px-6">
-      <div class="max-w-6xl mx-auto text-center text-gray-600 font-normal">
-        <p>© 2025 Inspire Analysis. All rights reserved.</p>
-      </div>
-    </footer>
   </div>
 </template>
+
+<style scoped>
+/* Smooth transitions */
+a {
+  transition: all 0.3s ease;
+}
+</style>

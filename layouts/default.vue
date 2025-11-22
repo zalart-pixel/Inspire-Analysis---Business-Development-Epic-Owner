@@ -1,3 +1,4 @@
+import { ref } from 'vue'
 <script setup>
 const mobileMenuOpen = ref(false)
 
